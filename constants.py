@@ -22,7 +22,8 @@ phys_data = {
 PHYS = namedtuple("Data", phys_data.keys())(**phys_data)
 
 # Mechanical constants, e.g. gearing ratios, whether motors are inverted
-mech_data = {
+mech_data = { 
+    "Phoenix_motor_speed": 0.05,
 }
 MECH = namedtuple("Data", mech_data.keys())(**mech_data)
 

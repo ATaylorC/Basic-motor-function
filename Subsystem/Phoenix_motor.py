@@ -7,6 +7,7 @@ import phoenix6
 import commands2
 
 from constants import ELEC
+from constants import MECH
 
 class MotorSubsystem(commands2.Subsystem):
     def __init__(self):
@@ -15,10 +16,10 @@ class MotorSubsystem(commands2.Subsystem):
         self.controller = wpilib.XboxController
 
     def go_up(self):
-        self.phoenixmotor.set(0.4)
+        self.phoenixmotor.set(MECH.Phoenix_motor_speed)
 
     def go_down(self):
-        self.phoenixmotor.set(-0.4)
+        self.phoenixmotor.set(-MECH.Phoenix_motor_speed)
 
     def stop(self):
         self.phoenixmotor.set(0)
